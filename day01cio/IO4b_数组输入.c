@@ -2,8 +2,9 @@
 
 int main() {
     int n, i, t, a[100];
-    while (~scanf("%d", &n)) {
-        if (0 == n)break;//如果处理到EOF这行可以忽略
+    scanf("%d", &t);
+    while (t--) {
+        scanf("%d", &n);
         for (i = 0; i < n; i++) {
             scanf("%d", &a[i]);
         }
@@ -18,6 +19,7 @@ int main() {
 }
 /**
  * Sample Input:
+ * 2
  * 4 1 2 3 4
  * 5 1 2 3 4 5
  * Sample Output
