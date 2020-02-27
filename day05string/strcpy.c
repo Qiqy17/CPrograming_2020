@@ -2,7 +2,7 @@
 
 //#include<string.h>//strlen/strcpy/strcat/strcmp
 
-void strcat(char t[], char s[]) {
+void strcpy(char t[], char s[]) {
 
     int i;
 
@@ -14,8 +14,8 @@ void strcat(char t[], char s[]) {
 
 int main() {
     char s[100] = "helloworld";
-    char t[100] = "I will say: ";
-    strcat(t, s);
+    char t[100] = "";
+    strcpy(t, s);
     puts(t);
 
     return 0;
