@@ -2,14 +2,9 @@
 
 //#include<string.h>//strlen/strcpy/strcat/strcmp
 
-void strcpy(char t[], char s[]) {
+void strcpy(char *t, char *s) {
+    while (*t++ = *s++);
 
-    int i;
-//i<strlen(s)
-    for (i = 0; s[i] != '\0'; i++) {
-        t[i] = s[i];
-    }
-    t[i] = 0;
 }
 
 int main() {
