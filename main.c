@@ -1,17 +1,10 @@
 #include<stdio.h>
 
-void print(int a[], int n) {
-    int i;
-    for (i = 0; i < n; i++) {
-        printf(" %d", a[i]);
-
-    }
-    printf("\n");
-}
 
 int main() {
-    int a[10] ;
-    input(a,10);
-    print(a,10);
+    double a = 1, b = -1, c = -6;
+    double x1, x2;
+    root2(a, b, c, &x1, &x2);
+    printf("x1=%f x2=%f\n", x1, x2);
     return 0;
 }
