@@ -8,25 +8,27 @@ void print(int *a, int n) {
     printf("\n");
 }
 
-int inc(int *a, int *b) {
-    return *a - *b;
+int inc(const void *a, const void *b) {
+    return *(int *) a - *(int *) b;
 }
 
-int dec(int *a, int *b) {
-    return *b - *a;
+int dec(const void *a, const void *b) {
+    return *(int *) b - *(int *) a;
 }
 
-int mars(int *a, int *b) {
-    return *a - *b;
+int mars(const void *a, const void *b) {
+    return *(int *) a - *(int *) b;//TODO
 }
 
 int main() {
-    int a[] = {1, 3, 5, 7, 9, 2, 4, 6, 8, 0};
-    int n = sizeof(a) / sizeof(a[0]);
+    int a[] = {1111, 3123, 5, 7, 9, 2, 4, 6, 8, 110};
+    unsigned n = sizeof(a) / sizeof(a[0]);
     print(a, n);
     qsort(a, n, sizeof(a[0]), inc);
     print(a, n);
     qsort(a, n, sizeof(a[0]), dec);
+    print(a, n);
+    qsort(a, n, sizeof(a[0]), mars);
     print(a, n);
     return 0;
 }
