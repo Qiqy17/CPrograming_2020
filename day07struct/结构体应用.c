@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 #include<assert.h>
 
@@ -18,12 +19,13 @@ void add(struct Fraction a, struct Fraction b, struct Fraction *c);
 int gcd(int a, int b) { return b ? gcd(b, a % b) : a; }
 
 int main() {
-    int S = 0;
-    for (int i = 1; i <= 10; i++) {
-        S += i;
+    assert(2 == gcd(6, 8));
 
-    }
-    printf("%d\n");
+    struct Fraction a, b, c;
+    input(&a);
+    input(&b);
+    add(a, b, &c);
+    print(&c);
     return 0;
 }
 

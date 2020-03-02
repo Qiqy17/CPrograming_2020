@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void foo(int a[]) {
+void foo(int *a) {
     printf("in function foo a=%x\n", a);
     ++a[0];
 }
